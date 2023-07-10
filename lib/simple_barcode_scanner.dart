@@ -46,7 +46,15 @@ class SimpleBarcodeScannerPage extends StatelessWidget {
       scanType: scanType,
       appBarTitle: appBarTitle,
       centerTitle: centerTitle,
-      onScanned: (res) {
+      onScanned: (res) async{
+        print(res);
+        print(res);
+        print(res);
+        print(res);
+        print(res);
+
+        await Future.delayed(Duration(seconds: 10));
+
         Navigator.pop(context, res);
       },
     );

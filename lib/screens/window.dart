@@ -13,7 +13,7 @@ class WindowBarcodeScanner extends StatelessWidget {
   final String cancelButtonText;
   final bool isShowFlashIcon;
   final ScanType scanType;
-  final Function(String) onScanned;
+  final Function(List) onScanned;
   final String? appBarTitle;
   final bool? centerTitle;
 
@@ -146,7 +146,7 @@ class WindowBarcodeScanner extends StatelessWidget {
               event['data'].isNotEmpty &&
               barcodeNumber == null) {
             barcodeNumber = event['data'];
-            onScanned(barcodeNumber!);
+            onScanned([]);
           }
         }
       });

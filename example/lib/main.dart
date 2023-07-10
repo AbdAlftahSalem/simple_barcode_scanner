@@ -30,6 +30,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String result = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               },
               child: const Text('Open Scanner'),
             ),
-            Text('Barcode Result: $result'),
+            Text('Barcode Result: ${result.toString()}'),
           ],
         ),
       ),

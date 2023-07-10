@@ -63,6 +63,7 @@ class BarcodeScanner extends StatelessWidget {
         scanMode = ScanMode.DEFAULT;
         break;
     }
+
     String barcode = await FlutterBarcodeScanner.scanBarcode(
         lineColor, cancelButtonText, isShowFlashIcon, scanMode);
     onScanned(barcode);
